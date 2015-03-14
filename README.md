@@ -58,7 +58,7 @@ int main()
 		<< "StrArr1.size() = " << doc.getStringArrayData("StrArr1").size() << endl;
 
 	//Save it
-	//DbDoc::safe(file_path");
+	//DbDoc::save(file_path");
 	doc.safe("testDoc.xml");
 
 	DbDoc doc2;

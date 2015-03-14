@@ -6,7 +6,7 @@ WARRNING: this is a really simple DB linrary for C++. It only supports simple da
 Requirments : TinyXML2 and CMake installed.
 Tested on Ubuntu 14.04 64bit.
 
-Tutorial/Sample code
+Tutorial/Sample code (Yes... This is all what it can do)
 
 ```C++
 #include <sxdb.h>

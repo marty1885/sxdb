@@ -17,7 +17,7 @@ using namespace std;
 class DbDoc
 {
 public:
-	int safe(string path);
+	int save(string path);
 	int load(string path);
 
 	void addData(string name, int value);

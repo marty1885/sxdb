@@ -12,7 +12,7 @@ using namespace Sxdb;
 using namespace tinyxml2;
 using namespace std;
 
-int DbDoc::safe(string path)
+int DbDoc::save(string path)
 {
 	XMLDocument doc;
 	XMLDeclaration* decl = doc.NewDeclaration("xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"");
@@ -71,7 +71,7 @@ int DbDoc::safe(string path)
 			sprintf(str,"%d",vec[q]);
 			elem->SetText(str);
 
-			element->LinkEndChild(elem);	
+			element->LinkEndChild(elem);
 		}
 
 		rootElement->LinkEndChild(element);
@@ -93,7 +93,7 @@ int DbDoc::safe(string path)
 			sprintf(str,"%f",vec[q]);
 			elem->SetText(str);
 
-			element->LinkEndChild(elem);	
+			element->LinkEndChild(elem);
 		}
 
 		rootElement->LinkEndChild(element);
@@ -112,7 +112,7 @@ int DbDoc::safe(string path)
 			elem->SetAttribute("id",str);
 			elem->SetText(vec[q].c_str());
 
-			element->LinkEndChild(elem);	
+			element->LinkEndChild(elem);
 		}
 
 		rootElement->LinkEndChild(element);
@@ -149,7 +149,7 @@ int DbDoc::load(string path)
 		else if(element->Name() == string("string"))
 		{
 			stringData.push_back(string(element->GetText()));
-			stringDataName.push_back(element->FirstAttribute()->Value());	
+			stringDataName.push_back(element->FirstAttribute()->Value());
 		}
 		else if(element->Name() == string("int-array"))
 		{
@@ -188,7 +188,7 @@ int DbDoc::load(string path)
 				if(elem->GetText() == NULL)
 					vec.push_back("");
 				else
-					vec.push_back(elem->GetText());	
+					vec.push_back(elem->GetText());
 				elem = elem->NextSiblingElement();
 			}
 			stringArrayData.push_back(vec);

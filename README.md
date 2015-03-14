@@ -59,7 +59,7 @@ int main()
 
 	//Save it
 	//DbDoc::save(file_path");
-	doc.safe("testDoc.xml");
+	doc.save("testDoc.xml");
 
 	DbDoc doc2;
 	//You can also load from a file too!!

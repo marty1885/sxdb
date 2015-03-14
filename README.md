@@ -1,4 +1,4 @@
-# sxdb
+# sxdb - Simple Xml DataBase
 A simple XML based datastorage library
 
 WARRNING: this is a really simple DB linrary for C++. It only supports simple datatypes and 1D arrays.

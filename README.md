@@ -42,7 +42,7 @@ int main()
 	//To change data value. use setData(name,value). obvious right?
 	doc.setData("Int1",99);
 
-	//To cange a array. use getXXXArrayData(name,value)
+	//To cange a array. use setXXXArrayData(name,value)
 	vector<int> vec;
 	vec.resize(7);
 	doc.setIntArrayData("IntArr1",vec);

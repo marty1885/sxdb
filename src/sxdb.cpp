@@ -148,7 +148,13 @@ int DbDoc::load(string path)
 		}
 		else if(element->Name() == string("string"))
 		{
-			stringData.push_back(string(element->GetText()));
+			const char* cstr = element->GetText();
+			string str;
+			if(cstr == NULL)
+				str.append("");
+			else
+				str.append(element->GetText());
+			stringData.push_back(str);
 			stringDataName.push_back(element->FirstAttribute()->Value());
 		}
 		else if(element->Name() == string("int-array"))
